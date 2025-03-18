@@ -1,0 +1,61 @@
+Control Statement
+1) Conditional 
+    i) if Statement - for condition when true
+        if(condition)
+        {
+        Statement            
+        }
+    
+    ii) Nested if-else stmt - for condition when true  for if and false for else
+        if(condition)
+        {
+        if (condition2)
+        {Statement}
+        else[Statement]
+        }
+        else
+        {
+        if(condition1)
+        {
+        Statement
+        }
+        else if(condition2)
+        {
+        Statement
+        }
+    
+    iii) if-else stmt - for condition when true  for if and false for else
+        if(condition1)
+        {
+        True Statement
+        }
+        else
+        {
+        False Statement
+        }
+
+    
+
+2) Looping Statement
+    i) while
+        initialization
+        while(condition)
+        {
+            Statement
+            increment / decrement
+        }
+    
+    ii) Do-while
+        initialization
+        Do
+        {
+            Statement
+            increment/decrement
+        }
+        while condition
+
+    iii) for Loop
+        for(initialization; condition; increment/decrement)
+        {
+            Statement
+        }

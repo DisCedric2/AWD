@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Demo</title>
+</head>
+<body>
+    <h3> HELLO </h3>
+    <script>
+        /*
+        // array writing type-1
+        let empnames = ['cedric', 'syzer', 'disha', 'jandu']
+        console.log(empnames, typeof empnames);
+        document.write(empnames, typeof empnames);
+        let a = []
+        console.log(a,typeof a)
+        document.write(a,typeof a)
+        a.push('mango')
+        console.log(a);
+        document.write(a,typeof a)
+        empnames.push("discedric") // adds new element at the end
+        console.log(empnames)
+        document.write(empnames, typeof empnames);
+        a.unshift("lemon") // adds new element at first
+        console.log(a)
+        document.write(a,typeof a)
+        empnames.unshift('sid')
+        console.log(empnames);
+        document.write(empnames, typeof empnames);
+        let x = []
+        console.log(x);
+        x[6] = 'red' //  indexing adds new element a mentioned position of ndex number and keeps space before that empty
+        console.log(x);
+        x[3] = 'golden'
+        console.log(x);
+        console.log(empnames[3]);
+
+        // removing elments
+        empnames.pop() // removes last element
+        console.log(empnames) 
+        empnames.shift() // removes first element
+        console.log(empnames); 
+        delete empnames[2] // deleted element at index position bt leaves it empty doesnt shift older ones
+        console.log(empnames);
+        */
+        
+        // array writing type - 2 by using new keyword
+        let color = new Array();
+        color[0] = 'red'
+        color.push('blue')
+        color.unshift('green')
+        console.log(color);
+        document.write(color, "<br>");
+        // Travesing aaray element type-1
+        for(let i=0; i<color.length; i++)
+        {
+            console.log(color[i]);
+            document.write(color[i], "<br>")
+            
+        }
+        // Travesing aaray element type-2
+        for(let i in color)
+        {
+            console.log(i,"=", color[i]);
+            document.write(i,"=", color[i], "<br>");
+            
+        }
+        // Travesing aaray element type-3
+        for(let i of color)
+        {
+            console.log(i);
+            document.write(i, "<br>");
+        }
+        // Travesing aaray element type-4 forEach which is an unstructed way of writing
+        color.forEach(i=>{
+            console.log(i);
+            document.write(i,"<br>")
+        })
+    </script>
+</body>
+</html>
