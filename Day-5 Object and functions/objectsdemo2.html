@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Demo 2</title>
+</head>
+<body>
+    <script>
+        let empdata={
+            name : "Cedric",
+            Jobrole : "GOAT",
+            Salary : "32000000000",
+            1:123,
+        }
+        for(let element in empdata)
+        {
+            console.log(empdata[element]);
+            document.write(empdata[element], '<br>');
+        }
+        // object data typing
+        empdata.city = 'Mumbai'
+        empdata.DLno = 798465
+        empdata.name = "DisCedric"
+        console.log("After Updatinbg ---------");
+        document.write("After Updating ---------", '<br>');
+        
+        for(let element in empdata)
+        {
+            console.log(empdata[element]);
+            document.write(empdata[element], '<br>');
+        }
+        
+        console.log('adding data keys as function')
+        document.write('adding data keys as function', '<br>')
+        empdata.data = function() // anonymous function
+        {
+            return this.name + " " + this.Salary
+        }
+        console.log(empdata.data());
+        document.write(empdata.data(), '<br>');
+        
+        let colors={}
+        console.log(colors);
+        document.write(colors, '<br>');
+        
+        colors.first = 'red'
+        colors.second = 'blue'
+        console.log(colors);
+        document.write(colors, '<br>');
+    </script>
+</body>
+</html>

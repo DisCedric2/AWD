@@ -12,12 +12,26 @@
             age : 30,
             city : "Patna",
         }
-        console.log(person, typeof person);
-        document.write(person, ' ', typeof person, '<br>');
-        console.log(person['name']);
-        document.write(person['name'],' ',  typeof person['name'], '<br>');
+        // console.log(person, typeof person);
+        // document.write(person, ' ', typeof person, '<br>');
+        // console.log(person['name']);
+        // document.write(person['name'],' ',  typeof person['name'], '<br>');
         
+        for(let x in person)
+        {
+            console.log(person[x]);
+            document.write(person[x]);
+        }
         
+        //  for (let x of person) // wont work error;
+        // {
+        //     console.log(x);
+            
+        // }
+        // person.forEach(element => {// wont work error;
+        //     console.log(Element);
+            
+        // })
     </script>
 </body>
 </html>

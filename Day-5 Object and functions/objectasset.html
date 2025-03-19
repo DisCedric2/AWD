@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object as Set DataType</title>
+</head>
+<body>
+    <script>
+        let data = new Set(['a', 'b', 'c', 'b', 'd', 6, 69, 6, 9])
+        console.log(data, typeof data)
+        document.write(data, typeof data, '<br>')
+
+        data.add('grapes', 'a')
+        console.log(data);
+        document.write(data, '<br>');
+
+        for(let x of data)
+        {
+            console.log(x);
+            document.write(x, '<br>');
+            
+        }
+
+        // creating with empty set
+        let colors = new Set()
+        colors.add('red')
+        colors.add('blue')
+        console.log(colors)
+        document.write(colors, '<br>')
+
+        //empty map
+        let studentsdata = new Map()
+        studentsdata.set('Syzer', 'S')
+        studentsdata.set('Cedric', 'A+')
+        studentsdata.set('Disha', 'O')
+        console.log(studentsdata);        
+        document.write(studentsdata, '<br>');
+
+
+        let books = new Map([[1, 'pyscript'],[2, 'java'], [3, 'HP']]) // error when let books = new Map(['pyscript', 'java']) objectasset.html:24 Uncaught TypeError: Iterator value pyscript is not an entry object at new Map (<anonymous>)
+        console.log(books);
+        document.write(books, '<br>');
+
+        // date
+        let d = new Date()
+        console.log(d, typeof d)
+        console.log(d.getDate(),typeof d)
+        document.write(d, typeof d)
+
+        // math
+        let m = -69
+        console.log(Math.abs(m), typeof m);
+        console.log(Math.random()); // Default between 0(inclusive) to 1(exclusive) for eg., 0 to 0.999999999999999
+        console.log(Math.floor(Math.random()*101), typeof m); // random 1 to 100
+        document.write(Math.abs(m));
+            
+        
+    </script>
+</body>
+</html>
