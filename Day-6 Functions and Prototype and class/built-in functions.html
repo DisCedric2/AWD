@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Built-in Function</title>
+</head>
+<body>
+    <script>
+        /*
+        // call(), apply(), bind()
+        let student = {
+            fname : 'Cedric',
+            lname : "itis",
+            fullname : function()
+            {
+                return this.fname + " " + this.lname
+            }
+        }
+
+        console.log(student.fullname());
+        document.write(student.fullname(), '<br>');
+        
+        let s1 = {fname : 'Syzer', lname : 'Spidey'}
+        let s2 = {fname : 'Disha', lname : 'Patani'}
+
+        console.log(student.fullname.call(s1)); // reads the argument as separately
+        document.write(student.fullname.call(s1), '<br>'); 
+
+        console.log(student.fullname.apply(s2)); // read the argunment as array
+        document.write(student.fullname.apply(s2), '<br>');
+
+        let ans = student.fullname.bind(s2) // borrowing given object elements
+        console.log(ans());
+        document.write(ans(), '<br>');
+        */
+
+        function test1(arg1, arg2)
+        {
+            console.log('test1:' , this.num, arg1, arg2);
+            document.write('test1:' , this.num, arg1, arg2, '<br>');
+        }
+        test1.call(num=100,45,54)
+        test1.call({num:100}, 46, 69)
+
+        function test2(...args)
+        {
+            console.log('test2:' , this.num, args);
+            document.write('test2:' , this.num, args, '<br>');
+        }
+        test2.call({num:456}, [45,54,69,999])
+        test2.apply({num:456}, [45,54,69,999], test1.call({num:100}, 46, 69))
+
+        function test3(args)
+        {
+            console.log('test3:' , this.num, args);
+            
+        }
+        let ans = test3.bind({num:123},465,789)
+        console.log(ans());
+        
+        
+    </script>
+</body>
+</html>
